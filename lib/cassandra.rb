@@ -1,7 +1,7 @@
 require 'rubygems'
 gem 'thrift_client', :git => 'git@github.com:rajofchennai/thrift_client.git'
 require 'thrift_client'
-gem 'simple_uuid' , '~> 0.2.0'
+gem 'simple_uuid' , '~> 0.1.0'
 require 'simple_uuid'
 
 require 'json' unless defined?(JSON)
