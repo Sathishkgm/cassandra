@@ -3,6 +3,7 @@
 #
 # DO NOT EDIT UNLESS YOU ARE SURE THAT YOU KNOW WHAT YOU ARE DOING
 #
+## These are the changes made by sathish
 
 require 'thrift'
 require 'cassandra_types'
@@ -12,7 +13,7 @@ require 'cassandra_constants'
       module Cassandra
         class Client
           include ::Thrift::Client
-
+=begin
           def login(keyspace, auth_request)
             send_login(keyspace, auth_request)
             recv_login()
@@ -56,7 +57,7 @@ require 'cassandra_constants'
           def send_get_slice(keyspace, key, column_parent, predicate, consistency_level)
             send_message('get_slice', Get_slice_args, :keyspace => keyspace, :key => key, :column_parent => column_parent, :predicate => predicate, :consistency_level => consistency_level)
           end
-
+=end
           def recv_get_slice()
             result = receive_message(Get_slice_result)
             return result.success unless result.success.nil?
